@@ -1,0 +1,1275 @@
+/*-----------------------------------imported-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/*----------------------------------Foundations---------------------------------*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    transition: all 0.3s;
+
+}
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #1bc5ad;
+}
+img{
+    width:100%;
+}
+a{
+    text-decoration: none;
+}
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+}
+.hidden{
+    display: none;
+}
+.color-30e3ca , .icon , .section-intro h1{
+    color: #30e3ca;
+}
+.background-color-30e3ca{
+    background-color: #30e3ca;
+}
+.p-70px{
+    padding: 100px 0;
+}
+.btn{
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 17px;
+}
+.white-btn{
+    color: #fff;
+}
+/*------------------------- ----end of Foundations--------------------------------*/
+
+/*-----------------------------shared properties---------------------------------*/
+header{
+    position:absolute;
+    top:35px;
+    left:0;
+    right:0;
+     z-index: 2;
+}
+header nav{
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    border-radius: 7px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav .site-name a{
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+}
+nav .pages-links{
+    width: 59%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+header nav .pages-links a{
+    width: 18%;
+    font-size: 15px;
+    color: #000; 
+}
+/*-----Action-----*/
+header .pages-links a:hover{
+    color:#30e3ca
+}
+/*end of actions*/
+.HomePage-header , .AboutPage-header{
+    background-size:cover;
+    position: relative;
+    background-image: url(../Images/xhero_1.jpg.pagespeed.ic.6EEnhRLjFc.webp);
+    display: flex;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.HomePage-header::after , .AboutPage-header::after{
+    content:"";
+    position: absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    background-color:rgb(0, 0, 0 , 0.4);
+    z-index: -1;
+}
+.HomePage-header .HomePage-Text , .AboutPage-header .AboutPage-Text{
+    margin-bottom: 30px;
+    animation-name: scroll-up ;
+    animation-duration: 1s;
+}
+.HomePage-header .HomePage-Text h1 , .AboutPage-header .AboutPage-Text h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+}
+.HomePage-header .HomePage-Text p , .AboutPage-header .AboutPage-Text p{
+    font-size: 20px;
+    color: #bab9b9;
+}
+.HomePage-header .search-form{
+    padding: 20px 10px;
+    background: #ffffff4a;
+    border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    animation-name: scroll-up ;
+    animation-duration: 1.5s;
+}
+.HomePage-header .Search-box input , .Search-box select{
+    width: 25%;
+    padding: 6px 12px;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    height: 45px;
+    color:#bab9b9
+}
+.HomePage-header .Search-box .location-input input{
+    width: auto;
+}
+ .btn:hover{
+    background-color: #1bc5ad;
+}
+.HomePage-header .Search-box .location-input{
+    position:relative;
+}
+.HomePage-header .Search-box .location-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    top: 9px;
+    color: #5d5d5d;
+}
+.solid-star{
+    color: orange;
+}
+.section-intro{
+    position:relative;
+    line-height: 1.5;
+    margin-bottom: 48px;
+}
+.section-intro::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    bottom: -7px;
+    left: 77px;
+    background-color: #30e3ca;
+}
+.section-intro h1{
+    font-size: 32px;
+    text-transform: capitalize;
+}
+.section-intro p{
+    text-transform: capitalize;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);;
+}
+.type{
+    padding: 7px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.item-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.item-category a{
+    background-color: rgba(0,0,0,.03);
+    padding: 5px;
+    border-radius: 20px;
+}
+.heart:hover , .Products .product-img .img-overlay .more-info .reaction:hover{
+    background-color: red;
+    color: #fff;
+}
+p{
+    line-height: 1.8;
+}
+footer{
+    padding: 128px 0px;
+    background-color: #333333;
+}
+footer .row1{
+        padding-bottom: 35px;
+        border-bottom: 1px solid #999999;
+}
+footer h4{
+    color: #fff;
+    font-weight: 100;
+    margin-bottom:24px
+}
+footer .nav-links{
+    line-height:1.9
+}
+footer .nav-links a:hover{
+    color: #fff;
+}
+footer  a ,footer p{
+    color: #999999;
+}
+footer a:hover{
+    color:#fff
+}
+footer .btn{
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    border-radius: 0;
+    padding: 6px 12px;
+}
+footer input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6c757d;
+    background-color: transparent;
+}
+footer input::placeholder{
+    font-size:18px
+}
+/*-------------------------end of shared properties-----------------------------*/
+
+/*-----------------------------Main properties---------------------------------*/
+/*------------------------------HomePage styling-------------------------------*/
+.main{
+    background-color: #f8f9fa!important;
+}
+.HomePage-header{
+    background-image:url(../Images/xhero_2.jpg.pagespeed.ic._xYTRIlPTB.webp);
+    
+}
+/*-------------------------------------------------Categories section style--------------------------------------------------------------*/
+.Categories .Category  {
+    background-color: #fff;
+    transform: translateY(-100px);
+    z-index: 99;
+    position: relative;
+    border-radius: 7px;
+    margin-bottom: 48px;
+}
+.Categories .Category .col {
+    width: 16.66%;
+    text-align: center;
+    border-radius: 7px;
+    padding: 30px 10px;
+}
+.Categories .Category .col .icon{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.Categories .Category .col h4{
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+.Categories .Category .col a{
+    color: #000;
+}
+.icon , .Categories .Category .col a {
+    transition: all 0.1ms;
+}
+.Categories .Category .col .available {
+    background-color: #e9ecef;
+    border-radius: 136px;
+    margin: 0px 56px;
+    font-weight: 100;
+    padding: 10px 0px;
+}
+
+.Categories .items .col{
+    width:25%;
+}
+.Categories .items .col .item{
+    background-color: #fff;
+}
+.Categories .item{
+    background-color: #fff;
+    margin: 9px 9px 0px 9px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.Categories .item .item-img{
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.Categories .item .item-img img{
+    height: 151px;
+    object-fit: cover;
+}
+.Categories .item .item-info{
+padding:20px}
+
+.Categories .item .item-info .item-category span{
+    background-color: #e9ecef;
+    cursor:context-menu;
+}
+.Categories .item .item-info .item-features {
+    line-height: 1.8;
+}
+.Categories .item .item-info .item-features a{
+    font-weight:600;
+}
+.Categories .item .item-info .item-features p{
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+.Categories .item .item-info .item-features span{
+    color: gray;
+}
+
+
+/*------------Actions-------------*/
+.Categories .Category .col:hover{
+    background-color: #30e3ca;
+    transform: translateY(-12px);
+    box-shadow: 0px 9px 6px teal;
+}
+.Categories .Category .col:hover a {
+    color:#fff
+}
+.Categories .Category .col:hover a .icon{
+    color: #fff;
+}
+.Categories .Category .col:hover a h5{
+    background-color: #1bc5ad;
+}
+.Categories .item .item-info .item-features a:hover{
+    color: #1bc5ad;
+}
+/*--------------------------------------------end of Categories section style---------------------------------------------------------*/
+
+/*-------------------------------------------------Products section style--------------------------------------------------------------*/
+.Products{
+    background-color: #fff;
+}
+.Products .row1{
+    justify-content: center;
+}
+.Products .row .section-intro{
+    text-align: center;
+}
+.Products .row .col-row1{
+    width:33.33%;
+}
+.Products .product-img{
+    position: relative;
+    margin: 12px;
+    border-radius: 7px;
+    display: flex;
+    overflow: hidden;
+}
+.Products .product-img::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    z-index:2;
+}
+.Products .product-img .products-info {
+    padding: 0px 15px;
+}
+.Products .product-img , .product-img a {
+    color: white;
+
+}
+.Products .product-img .img-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:3;
+
+}
+.Products .product-img .img-overlay .more-info{
+    margin-top:15px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+}
+.Products .product-img .img-overlay .more-info .item-name a{
+    font-size: 21px;
+}
+.Products .product-img .img-overlay .more-info .item-name p{
+    font-size: 15px;
+    color: rgba(255,255,255,.8);
+}
+.Products .product-img .img-overlay .more-info .reaction{
+    margin: 12px 0px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background-color: #ffffff47;
+}
+.Products .row .col-row2{
+    width:50%
+}
+
+/*-------------------------------Action--------------------------------*/
+.Products .product-img:hover img{
+    transform: scale(1.1);
+}
+/*----------------------------------------------end of Products section style----------------------------------------------------------*/
+
+/*-------------------------------------------------Trending section style--------------------------------------------------------------*/
+.Trending{
+    background-color: #f8f9fa;
+}
+.Trending .section-intro::after{
+    left:0;
+}
+.Trending .col{
+    width:50%;
+    padding:0px 10px
+}
+.Trending .col .trend-item{
+    background-color: #fff;
+    margin-bottom:30px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.Trending .col .trend-item .trend-item-img{
+    width:45%;
+    display: flex;
+    cursor: pointer;
+}
+.Trending .col .trend-item .trend-item-info{
+    width:53%;
+    padding:20px
+}
+.Trending .col .trend-item .type{
+    background-color: #e9ecef;
+}
+.Trending .col .trend-item .trend-item-info .trend-item-features {
+    line-height: 2.5;
+}
+.Trending .col .trend-item .trend-item-info .trend-item-features a{
+font-size: 18px;
+}
+.Trending .col .trend-item .trend-item-info .trend-item-features p{
+    font-size: 14px;
+}
+.Trending .col .trend-item .trend-item-info .trend-item-features span{
+    color:#6c757d
+}
+
+/*-----------------------------Actions----------------------------------*/
+.Trending .col .trend-item .trend-item-info .trend-item-features a:hover{
+    color: #1bc5ad;
+}
+/*--------------------------------------------end of Trending section style------------------------------------------------------------*/
+
+/*-------------------------------------------------Testimonials section style--------------------------------------------------------------*/
+.Testimonials{
+    background-color: #fff;
+}
+.Testimonials .row1{
+    text-align: center;
+    justify-content: center;
+}
+.Testimonials .section-intro::after{
+    left: 48px;
+}
+.Testimonials .Testimonials-profile{
+    margin: 0px 155px;
+}
+.Testimonials .Testimonials-profile .profile-img{
+    margin: 0px 350px 15px 350px;
+}
+.Testimonials .Testimonials-profile .profile-img img{
+
+    border-radius:76px
+}
+.Testimonials .Testimonials-profile h4{
+    margin-bottom: 15px;
+    color: #4D4D4D;
+}
+.Testimonials .Testimonials-profile p{
+    font-size: 24px;
+    color: #4D4D4D;
+    font-style: italic;
+}
+.Testimonials .Testimonials-profile p::before{
+    content: '“';
+}
+.Testimonials .Testimonials-profile p::after{
+    content: '”';
+}
+/*-----------------------------Actions----------------------------------*/
+
+/*----------------------------------------------end of Testimonials section style----------------------------------------------------------*/
+
+
+/*-------------------------------------------------Blog section style--------------------------------------------------------------*/
+.Blog{
+    background-color:#f8f9fa;
+}
+.Blog .row1{
+    justify-content: center;
+    text-align: center;
+}
+.Blog .col{
+    width: 33.33%;
+}
+.Blog .blog-content{
+    margin: 15px;
+}
+.Blog .blog-content .blog-img{
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 30px;
+}
+.Blog .blog-content .blog-info{
+    padding:0px 20px;
+}
+.Blog .blog-content .blog-info .blog-title{
+    color: #000;
+    font-size: 20px;
+}
+.Blog .blog-info .row{
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 5px 0px;
+}
+.Blog .blog-info ul{
+    width:55%
+}
+.Blog .row3{
+    justify-content: center;
+    margin-top: 24px;
+}
+/*-----------------------------Actions----------------------------------*/
+.Blog .blog-info .row a:hover{
+    color: #1bc5ad;
+}
+/*----------------------------------------------end of Blog section style----------------------------------------------------------*/
+
+
+/*-------------------------------------------------Newsletter section style--------------------------------------------------------------*/
+.Newsletter{
+    padding: 48px 0px;
+    color: white;
+}
+.Newsletter .row{
+    align-items: center;
+}
+.Newsletter .col{
+    width: 50%;
+    line-height: 1.5;
+}
+.Newsletter .col h4{
+    font-size: 18px;
+    font-weight: 100;
+}
+.Newsletter .col p{
+    color: rgba(255, 255, 255, 0.7);
+}
+.Newsletter form input{
+    width: 100%;
+    border:none;
+    background-color: transparent;
+    font-size:18px;
+    border-bottom:1px solid #fff;
+    padding:6px 12px 6px 0px
+}
+.input-overlay{
+    position: relative;
+}
+.Newsletter form input::placeholder{
+    color: #fff;
+    font-style: italic;
+    font-size:16px
+}
+.Newsletter form .sub-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+}
+/*-----------------------------Actions----------------------------------*/
+.Newsletter form .sub-btn:hover{
+    background-color: #000;
+    color:#fff
+}
+/*----------------------------------------------end of Newsletter section style----------------------------------------------------------*/
+/*-------------------------end of HomePage styling-------------------------------*/
+
+
+
+/*----------------------------AboutPage styling---------------------------------*/
+.About-Us{
+    /* background-color: #30e3ca; */
+}
+.About-Us .col{
+    width:33.33%
+}
+.About-Us .About-Us-Imgs .col{
+    width:25%
+}
+.About-Us .About-Us-Imgs .row{
+    border: 2px solid #898787;
+    box-shadow: 10px 11px 31px rgb(0 0 0 / 88%);
+}
+.About-Us .First-Para{
+    margin:15px
+}
+.About-Us .About-Us-Imgs .Image{
+    border:2px solid rgba(0, 0, 0, 0.316);
+    display: flex;
+}
+.Our-Team{
+    /* background-color: yellow; */
+}
+.Our-Team .row2 .col{
+    width:25%;
+}
+.Our-Team .Members-profile{
+    margin:0px 12px
+}
+.Our-Team .Members-profile .member-name h2{
+    font-weight: 200;
+    color: #4d4d4d;
+    margin: 8px 0px;
+}
+.Our-Team .Members-profile .member-position h4{
+    color: #30e3ca;
+    font-size:12px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+.Why-Us .col , .Co-Customer .col{
+    width:50%;
+}
+.Why-Us .col1{
+    padding: 45px 15px 0px 15px;
+}
+.Why-Us .Why-Img , .Co-Customer .Co-Customer-Img{
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    transform: rotateY(29deg);
+    box-shadow: -30px 7px 13px #00000052;
+    border-left: 2px solid #00000067;
+}
+.Why-Us .col2{
+    padding-left: 150px;
+}
+.Why-Us .Title h1 ,  .Co-Customer .Title h1{
+    margin-bottom: 15px;
+    color:#30e3ca;
+    font-weight: 300;
+    font-size: 35px;
+}
+.Why-Us .Explain .Para1 , .Co-Customer .Explain .Para1{
+    margin-bottom: 16px;
+}
+.Why-Us .Explain .Para2{
+    margin-bottom: 23px;
+}
+.Why-Us .Explain .ul , .Co-Customer .Explain .ul {
+    line-height: 2.4;
+}
+.Why-Us .Explain .right-sign , .Co-Customer .Explain .right-sign{
+    color: #30e3ca;
+    margin-right: 15px;
+}
+
+/*------------------------end of AboutPage styling------------------------------*/
+
+/*----------------------------ContactPage styling---------------------------------*/
+.form{
+    /* background-color: violet; */
+}
+.form .col{
+    
+}
+.form form , .form .Contact-info .row{
+    margin:0px 15px;
+    padding: 17px 15px
+}
+
+label{
+    margin-bottom:10px
+}
+textarea{
+    height: 252px;
+}
+.form .btn{
+    background-color: #30e3ca;
+}
+.btn:hover{
+    background-color:#1bc5ad;
+}
+.form  form , .form .Contact-info .row{
+    background-color: #fff;
+}
+.Contact-info .row1 h4{
+    width: 100%;
+    margin:12px 0px
+}
+.Contact-info .row1 a{
+   color: #30e3ca;
+}
+.Contact-info .row1 a:hover{
+    color: #1bc5ad;
+ }
+ .Contact-info .row2 p{
+    margin: 18px 0px;
+ }
+.form .Contact-info .row1{
+    margin-bottom: 15px;
+}
+
+/*------------------------end of ContactPage styling------------------------------*/
+
+/**/
+.Ads .col{
+    width:33.33%
+}
+.Ads .item
+{
+    background-color: #fff;
+    margin: 9px 9px 18px 9px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.Ads .item .item-info{
+    padding: 15px;
+}
+.Ads .item .type{
+    background-color: #e9ecef;
+}
+/**/
+
+/**/
+.Blogs .blog-content {
+    border-radius: 15px;
+    background-color: #fff;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.Blogs .blog-content .blog-img{
+    border-radius: 0;
+}
+/**/
+/*-------------------------end of Main properties-------------------------------*/
+
+/*--------------------------------Animation-------------------------------------*/
+@keyframes scroll-up{
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*--------------------------------Responsitivty----------------------------------*/
+@media screen and (max-width:1024px){
+    .HomePage-header {
+        height:auto;
+    }
+    .Categories .Category {
+        justify-content: center;
+    }
+    .Categories .item {
+        margin: 9px 4px 0px 4px;
+    }
+    .Categories .Category .col {
+        width: 25%;
+    }
+    .Categories .item .item-info {
+        padding: 12px 4px;
+    }
+    .Products .product-img .img-overlay .more-info .reaction {
+        padding: 4px 7px;
+    }
+    .Products .product-img .img-overlay .more-info .item-name a {
+        font-size: 19px;
+    }
+    .Products .product-img .products-info {
+        padding: 0px 7px;
+    }
+    .Products .product-img {
+        margin: 5px;
+    }
+    
+    .Trending .col .trend-item .trend-item-info .trend-item-features {
+        line-height: 1;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features a {
+        font-size: 17px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features p {
+        font-size: 13px;
+        margin: 10px 0px;
+    }
+    .Trending .col .trend-item .trend-item-info {
+        width: 55%;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features span {
+        font-size: 15px;
+    }
+    .Testimonials .Testimonials-profile {
+        margin: 0px 50px;
+    }
+    .Testimonials .Testimonials-profile p {
+        font-size: 20px;
+    }
+    .Blog .blog-content {
+        margin: 10px;
+    }
+    .Blog .blog-content .blog-info {
+        padding: 0px;
+    }
+    .About-Us .About-Us-Imgs .row {
+        transform: translate(20px, 13px);
+    }
+    .About-Us .First-Para{
+        margin:0px 15px
+    }
+    .Why-Us .col2 {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:992px){
+    .HomePage-header, .AboutPage-header {
+        height: auto;
+        background-position: center;
+    }
+   /*  header nav .pages-links a {
+        visibility: hidden;
+    } */
+    .hidden {
+        display: contents;
+    }   
+
+    header {
+        top: 16px;
+    }    
+    .HomePage-header .HomePage-Text {
+        margin: 30px 0px;
+    }
+    .Categories .Category .col {
+        width: 33.33%;
+    }
+    .Categories .items{
+        justify-content:center
+    }    
+    .Categories .items .col {
+        width: 33.33%;
+    }
+    .Products .product-img {
+        margin: 4px;
+    }
+    .Products .product-img .products-info {
+        padding: 0px 5px;
+    }
+    .Products .product-img .img-overlay .more-info .item-name a {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .Products .product-img .img-overlay .more-info .reaction {
+        padding: 4px 8px;
+    }
+    .Trending .col .trend-item .trend-item-info {
+        width: 55%;
+        padding: 13px;
+    }
+    .item-category {
+        margin-bottom: 15px;
+    }    
+    .Trending .col .trend-item .trend-item-info .trend-item-features {
+        line-height: 1;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features a {
+        font-size: 16px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features p {
+        font-size: 13px;
+        margin: 10px 0px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features span {
+        font-size: 15px;
+    }
+    .Testimonials .Testimonials-profile  {
+        margin: 0px 24px;
+    }
+    .Testimonials .Testimonials-profile p {
+        font-size: 19px;
+    }
+
+    footer {
+        padding: 65px 0px;
+    }  
+    
+    .About-Us .section-intro {
+        margin-bottom: 92px;
+    }
+    .About-Us .col {
+        width: 100%;
+    }
+    .About-Us .About-Us-Imgs .row {
+        transform: translate(58px, -43px);
+    }
+    .About-Us .First-Para{
+        margin-bottom: 20px;
+    }
+    .Our-Team .row2 .col {
+        width: 100%;
+    }
+    .Our-Team .Members-profile .member-img {
+        width: 50%;
+        margin: auto;
+    }
+    .Our-Team .Members-profile .member-img img {
+        border-radius: 122px;
+    }
+    .Why-Us .col, .Co-Customer .col {
+        width: 100%;
+    }
+    .Why-Us .Why-Img, .Co-Customer .Co-Customer-Img {
+        margin-bottom: 15px;
+    }
+    .Why-Us .col2 , .Co-Customer .col1 {
+        padding-left: 0;
+        text-align: center;
+    }
+    .Why-Us .col, .Co-Customer .col1{
+        order: 1;
+    }
+    .form .col {
+        width: 100%;
+    }
+    .form .col1{
+        margin-bottom: 15px;
+    }
+    .Blogs .blog-content .blog-info {
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width:768px){
+    header {
+        top: 20px;
+        padding: 10px;  
+    }
+    header nav {
+        padding: 12px;
+    }
+    .HomePage-header .Search-box input::placeholder , .Search-box select {
+        font-size: 15px;
+    }
+    .btn {
+        margin-top: 15px;
+    }
+    .Categories .Category {
+         background-color: transparent; 
+         margin:0;
+    }
+    .Categories h2 {
+        margin-bottom: 21px;
+    }
+
+    .Categories .Category .col {
+        width: 50%;
+        margin-bottom: 15px;
+        background-color: #fff;
+        border-right: 1px solid #0000002b;;
+        border-bottom: 1px solid #0000002b;;
+    }
+    .Categories .item {
+        border-radius: 0;
+    }
+    .Categories .items .col {
+        width: 50%;
+        overflow: hidden;
+        margin-bottom: 15px;
+        box-shadow: 0px 4px 11px #00000066;
+    }
+    .Categories .items .col1 .item{
+        border-left: 1px solid #0000001f;
+    }
+    .Categories .items .col2 .item{
+        border-right: 1px solid #0000001f;
+    }
+    .Products .row .col-row1 {
+        width: 50%;
+    }
+    .Products .row2{
+        justify-content: center;
+    }
+    .Products .product-img .img-overlay .more-info .item-name a {
+        font-size: 16px;
+    }
+    
+    .Products .product-img .products-info {
+        padding: 0px 6px;
+    }
+    .Trending .col .trend-item {
+        box-shadow: -2px 2px 6px #00000047;
+    }
+    .Trending .col .trend-item .trend-item-img {
+        width: 38%;
+    }
+    .Trending .col .trend-item .trend-item-info {
+        padding: 6px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features {
+        line-height: 1.2;
+    }
+    .Trending .col .trend-item .trend-item-info {
+        width: 61%;
+    }
+    
+    .Trending .col .trend-item .trend-item-info .trend-item-features a {
+        font-size: 16px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features p {
+        font-size: 12px;
+        margin-top:4px
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features span {
+        font-size: 12px;
+    }
+    .Testimonials .Testimonials-profile {
+        margin: 0px 16px;
+    }
+    .Testimonials .Testimonials-profile .profile-img {
+        margin: 0px 226px;
+    }
+    .Testimonials .Testimonials-profile h4 {
+        font-size: 18px;
+    }
+    .Testimonials .Testimonials-profile p {
+        font-size: 20px;
+    }
+    
+    .Blog .row{
+        justify-content: center;
+    }
+    .Blog .col {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+    .Blog .blog-content {
+        background-color: #fff;
+        box-shadow: 0px 0px 10px #00000087;
+        padding-bottom: 15px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .Blog .blog-content .blog-img {
+        border-radius: 0px;
+    }
+    .Blog .blog-content .blog-info {
+        padding: 0px 5px;
+    }
+    
+    footer {
+        padding: 72px 0px;
+    }
+    footer .row1 {
+       justify-content: center;
+    }
+    footer .col1 {
+        width: 50%;
+    }
+    footer .col2 {
+        width: 23%;
+    }
+
+    footer .col3 {
+        width: 53%;
+        margin-top: 31px;
+        border-top: 1px solid #999999;
+        padding-top: 22px;
+    }
+    footer .col3 .btn {
+        top: -14px;
+    }
+    .Ads .col {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    header {
+        top: 15px;
+    }
+    .HomePage-header .HomePage-Text h1 {
+        font-size: 28px;
+    }
+    .HomePage-header .Search-box input, .Search-box select ,.location-input ,  .location-input input{
+        width: 100%;
+        margin: 16px 0px;
+    }
+    .HomePage-header .Search-box .location-icon {
+        top: 23px;
+    }
+    .HomePage-header .Search-box .location-input input {
+        width: 100%;
+    }
+    .Categories .Category {
+        background-color: transparent;
+    }
+    .Categories .Category .col {
+        background-color: #fff;
+        width: 100%;
+        margin-bottom: 15px;
+        box-shadow: 0px 5px 8px #00000057;
+    }
+    .Categories .item {
+        margin: 0px;
+    }
+    .Categories .items .col {
+        width: 100%;
+        box-shadow: 0px 2px 10px #0000004d;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+    .Products .row .col-row1 , .Products .row .col-row2  {
+        width: 100%;
+    }
+    .Trending .col {
+        width: 100%;
+        padding: 0;
+    }
+    .Trending .col .trend-item .trend-item-info {
+        padding: 12px 0px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features a {
+        font-size: 16px;
+    }
+    .Trending .col .trend-item .trend-item-info .trend-item-features p {
+        font-size: 12px;
+    }    
+    .Testimonials .Testimonials-profile {
+        margin: 0px;
+    }
+    .Testimonials .Testimonials-profile .profile-img {
+        margin: 0px 170px;
+    }
+    .Testimonials .Testimonials-profile p {
+        font-size: 18px;
+    }
+    .Blog .col {
+        width: 100%;
+    }
+    .Blog .blog-content .blog-info {
+        padding: 0px 9px;
+    }
+    .Blog .blog-content .blog-info .blog-title {
+        font-weight: 600;
+    }
+    .Blog .blog-info .row {
+        justify-content: space-around;
+    }
+    .Blog .blog-info ul {
+        width: 62%;
+    }
+    .Newsletter .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .Newsletter .col p {
+        border-bottom: 1px solid #0000000f;
+        padding-bottom: 19px;
+    }
+   .Newsletter .col2 {
+    width: 70%;
+    margin: auto;
+}
+    .input-overlay {
+        border-radius: 10px;
+        overflow: hidden;
+        border: 3px solid #0000002e;
+    }
+    .Newsletter form input {
+        border:none;
+    }
+    
+    footer {
+        padding: 90px 0px;
+    }
+    footer .col{
+        width: 100%;
+        margin: 15px;
+        padding-bottom: 21px;
+        border-bottom: 1px solid #ffffff1f;
+    }
+    footer .row1 {
+        border:none;
+        padding: 0;
+    }
+    footer .col2 .row {
+        justify-content: space-evenly;
+    }
+    footer .col3 {
+        border-top: 0px;
+    }
+    footer .col3 input {
+        border:none
+    }
+    footer .row2{
+        font-size: 14px;
+        margin-top: 18px;
+    }
+    @keyframes scroll-up{
+        0%{
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .HomePage-header, .AboutPage-header {
+    }
+    .HomePage-header .HomePage-Text h1, .AboutPage-header .AboutPage-Text h1 {
+        font-size: 40px;
+    }
+    .HomePage-header .HomePage-Text p, .AboutPage-header .AboutPage-Text p {
+        font-size: 16px;
+    }
+ 
+}
+
+@media screen and (max-width:400px){
+    
+ 
+}
+/*-----------------------------end of Responsitivty-------------------------------*/
